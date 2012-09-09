@@ -12,6 +12,7 @@ gem "haml", "3.1.7"
 gem "bootstrap-sass", "2.1.0.0"
 gem "will_paginate", "3.0.3"
 gem "bootstrap-will_paginate", "0.0.8"
+gem "devise", "2.1.2"
 
 
 # Gems used only for assets and not required
