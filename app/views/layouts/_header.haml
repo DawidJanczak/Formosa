@@ -4,8 +4,8 @@
       =link_to "Formosa.pl", root_url, class: "brand"
       %nav
         %ul.nav.pull-right
-          %li
-            -if user_signed_in?
-              =link_to "Sign out", destroy_user_session_path, method: :delete
-            -else
-              =link_to "Sign in", new_user_session_path
+          -if user_signed_in?
+            %li=link_to "Add a post", new_post_path
+            %li=link_to "Sign out", destroy_user_session_path, method: :delete
+          -else
+            =link_to "Sign in", new_user_session_path
