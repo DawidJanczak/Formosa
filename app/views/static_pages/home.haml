@@ -1,6 +1,6 @@
 %center.hero-unit
   -if user_signed_in?
-    %p Welcome back!
+    =render "shared/all_posts"
   -else
     %h1
       Welcome to Formosa.pl!
