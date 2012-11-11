@@ -1,1 +1,15 @@
 @import "bootstrap";
+
+/* home page */
+
+.hero-unit {
+  margin-top: 30px;
+}
+
+/* formtastic */
+
+.formtastic {
+  ol, ul {
+    list-style: none;
+  }
+}
