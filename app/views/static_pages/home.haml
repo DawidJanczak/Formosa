@@ -2,8 +2,7 @@
   -if user_signed_in?
     %p Welcome back!
   -else
-    %h1 Welcome to Formosa.pl!
-    %br
-    %small Sign up below or sign back in.
-    %br
+    %h1
+      Welcome to Formosa.pl!
+    %p Sign up below or sign back in.
     =link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large"
