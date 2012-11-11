@@ -1,8 +1,8 @@
-%center.hero-unit
-  -if user_signed_in?
-    =render "shared/all_posts"
-  -else
-    %h1
-      Welcome to Formosa.pl!
-    %p Sign up below or sign back in.
-    =link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large"
+-if user_signed_in?
+  =render "shared/user_feed"
+-else
+  %center.hero-unit
+  %h1
+    Welcome to Formosa.pl!
+  %p Sign up below or sign back in.
+  =link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large"
