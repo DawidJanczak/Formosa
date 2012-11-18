@@ -14,10 +14,11 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(params[:post])
     if @post.save
-      flash[:success] = "Post created."
+      flash[:notice] = "Post created."
+      redirect_to home_path
     else
-      flash[:error] = "Port could not be created."
+      flash.now[:error] = @post.errors.full_messages
+      render "new"
     end
-    redirect_to home_path
   end
 end
