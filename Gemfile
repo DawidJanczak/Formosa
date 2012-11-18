@@ -16,6 +16,7 @@ gem "bootstrap-will_paginate"
 gem "devise"
 gem "formtastic"
 gem "figaro"
+gem "faker"
 
 group :development, :test do
   gem "rspec-rails"
