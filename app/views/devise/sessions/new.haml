@@ -1,0 +1,18 @@
+=form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-horizontal") do |f|
+  =field_set_tag "Login" do
+    .control-group
+      =f.label :username, class: "control-label"
+      .controls
+        =f.text_field :username
+    .control-group
+      =f.label :password, class: "control-label"
+      .controls
+        =f.password_field :password
+    -if devise_mapping.rememberable?
+      .control-group
+        .controls
+          =f.label :remember_me, nil, class: "checkbox" do
+            =f.check_box :remember_me
+            Remember me
+    =f.submit "Login"
+=render "devise/shared/links"
