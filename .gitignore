@@ -19,3 +19,6 @@
 
 # Ignore bundler generated bin directory
 /bin
+
+# Ignore application configuration
+/config/application.yml
