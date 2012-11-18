@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.paginate(page: params[:page])
   end
 
   def show
@@ -15,6 +15,8 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(params[:post])
     if @post.save
       flash[:success] = "Post created."
+    else
+      flash[:error] = "Port could not be created."
     end
     redirect_to home_path
   end
