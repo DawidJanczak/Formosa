@@ -1,4 +1,5 @@
-=form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-horizontal") do |f|
+=form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-horizontal" }) do |f|
+  =devise_error_messages!
   =field_set_tag "Login" do
     .control-group
       =f.label :username, class: "control-label"
@@ -14,5 +15,7 @@
           =f.label :remember_me, nil, class: "checkbox" do
             =f.check_box :remember_me
             Remember me
-    =f.submit "Login"
+    .control-group
+      .controls
+        =f.submit "Login"
 =render "devise/shared/links"
