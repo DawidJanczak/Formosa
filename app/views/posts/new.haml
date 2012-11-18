@@ -1,7 +1,1 @@
-%h1 Add new post
-=form_for @post do |f|
-  =f.label :title
-  =f.text_field :title
-  =f.label :body
-  =f.text_area :body
-  =f.submit
+=render partial: "form", locals: { action: "New post" }, object: @post
