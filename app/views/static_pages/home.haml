@@ -3,6 +3,6 @@
 -else
   %center.hero-unit
     %h1
-      Welcome to Formosa.pl!
-    %p Sign up below or sign back in.
-    =link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large"
+      =t :welcome_message
+    %p=t :welcome_small
+    =link_to t(:sign_up_button), new_user_registration_path, class: "btn btn-primary btn-large"

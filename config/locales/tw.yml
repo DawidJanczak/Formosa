@@ -1,1 +1,6 @@
 # Traditional chinese language file
+
+tw:
+  welcome_message: 歡迎來到福爾摩沙.PL!
+  welcome_small: 建立新帳戶或登入
+  sign_up_button: 建立新帳戶
