@@ -1,12 +1,16 @@
 Formosa::Application.routes.draw do
-  devise_for :users
+  scope "/:locale" do
+    devise_for :users
 
+    match "/home", to: "static_pages#home"
+
+    resources :users
+
+    resources :posts
+  end
+
+  match "/:locale" => "static_pages#home"
   root to: "static_pages#home"
-  match "/home", to: "static_pages#home"
-
-  resources :users
-
-  resources :posts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
